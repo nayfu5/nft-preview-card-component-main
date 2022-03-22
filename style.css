@@ -1,7 +1,150 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  position: absolute;
+  bottom: 1em;
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
 
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #0d192b;
+  display: grid;
+  place-items: center;
+  font-family: 'outfit';
+  font-size: 1.125rem;
+  color: #8bacda;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #FFF;
+}
+
+h1:hover, h1:focus {
+  color: hsl(178, 100%, 50%)
+}
+
+span {
+  color: #FFF;
+}
+
+hr {
+  color: #2f415b;
+  margin-top: 0.75em;
+  margin-bottom: 1em;
+}
+
+.container {
+  max-width: 350px;
+  padding: 1.25em;
+  border-radius: 10px;
+  background-color: hsl(216, 50%, 16%);
+  box-shadow: 0 32px 0 15px #0c1729, 
+              0 64px 0 50px #0c192c;
+}
+
+.text-spacing {
+  margin-top: 1em;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-item {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.flex-item + .flex-item {
+  justify-content: flex-end;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.row p {
+  font-size: 1rem;
+  margin-left: 1em;
+}
+
+.icon {
+  margin-right: 3%
+}
+
+.flex-item p {
+  display: inline;
+}
+
+.currency-text {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+
+.hover-cyan {
+  transition: 0.5s all ease; 
+}
+
+.hover-cyan:hover, .hover-cyan:focus {
+  color:#00fff7;
+}
+
+.img-container {
+  position: relative;
+  max-height: 305px;
+}
+
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #00fff7;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.img-overlay:hover {
+  opacity: 0.5;
+}
+
+.view-img {
+  position: absolute;
+  display: none;
+}
+
+.img-overlay:hover + .view-img {
+  display: block;
+  inset: 0;
+  margin: auto;
+}
+
+@media (max-width:500px) {
+  .container {
+    margin: 1.3em;
+  }
+
+  .attribution {
+    top: 10px;
+  }
+}
